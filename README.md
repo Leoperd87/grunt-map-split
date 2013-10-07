@@ -25,61 +25,48 @@ In your project's Gruntfile, add a section named `map-split` to the data object 
 ```js
 grunt.initConfig({
   'map-split': {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    default_options: {
+      files: {
+        'path/to/source/map/file': 'output/path'
+      }
+    }
   },
 })
 ```
-
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
-grunt.initConfig({
-  'map-split': {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+  grunt.initConfig({
+    'map-split': {
+      default_options: {
+        files: {
+          'test/fixtures/testing': './tmp/'
+        }
+      }
+    }
+  });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+`test/fixtures/testing`:
 
-```js
-grunt.initConfig({
-  'map-split': {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+```json
+{
+"version":3,
+"file":"module_one.js",
+"lineCount":1,
+"mappings":"",
+"sources":[""],
+"names":[""]
+}
+{
+"version":3,
+"file":"module_two.js",
+"lineCount":1,
+"mappings":"",
+"sources":[""],
+"names":[""]
+}
 ```
 
 ## Contributing
