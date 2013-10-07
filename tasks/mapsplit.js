@@ -16,7 +16,7 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('mapsplit', 'javascript source map file split', function () {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      outputPath: './'
+//      outputPath: './'
 //      separator: ', '
     });
 
@@ -31,8 +31,8 @@ module.exports = function (grunt) {
           structure = JSON.parse('[' + (content).replace(/}/g, '},') + '{}]');
           for (j = 0; j < structure.length; j++) {
             if (structure[j].file) {
-              grunt.file.write(options.outputPath + structure[j].file, JSON.stringify(structure[j]));
-              grunt.log.writeln('File "' + options.outputPath + structure[j].file + '" created.');
+              grunt.file.write(this.files[key] + structure[j].file, JSON.stringify(structure[j]));
+              grunt.log.writeln('File "' + this.files[key] + structure[j].file + '" created.');
             }
           }
         }
