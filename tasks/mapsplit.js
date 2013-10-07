@@ -20,9 +20,12 @@ module.exports = function (grunt) {
 //      separator: ', '
     });
 
+    grunt.log.writeln('start');
     var i = 0, j, filepath = '', content = '', structure = [];
     if (this.files && this.files.length) {
+      grunt.log.writeln('firts if');
       for (; i < this.files.length; i++) {
+        grunt.log.writeln('for');
         filepath = this.files[i];
         if (!grunt.file.exists(filepath)) {
           grunt.log.warn('Source file "' + filepath + '" not found.');
