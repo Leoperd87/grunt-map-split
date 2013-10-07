@@ -1,5 +1,5 @@
 /*
- * grunt-mapsplit
+ * grunt-map-split
  * 
  *
  * Copyright (c) 2013 Efim Vl. Dejin
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('mapsplit', 'javascript source map file split', function () {
+  grunt.registerMultiTask('map-split', 'javascript source map file split', function () {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
 //      outputPath: './'

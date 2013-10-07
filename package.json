@@ -1,5 +1,5 @@
 {
-  "name": "grunt-mapsplit",
+  "name": "grunt-map-split",
   "description": "javascript source map file split",
   "version": "0.0.1",
   "homepage": "",

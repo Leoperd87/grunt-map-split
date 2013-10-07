@@ -1,5 +1,5 @@
 /*
- * grunt-mapsplit
+ * grunt-map-split
  * 
  *
  * Copyright (c) 2013 Efim Vl. Dejin
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    mapsplit: {
+    'map-split': {
       custom_options: {
 //        options: {
 //        },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'mapsplit', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'map-split', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
