@@ -30,21 +30,11 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     mapsplit: {
-      default_options: {
-        options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        }
-      },
       custom_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          outputPath: './tmp/'
         },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        }
+        files: ['test/fixtures/testing']
       }
     },
 
