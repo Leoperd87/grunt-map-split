@@ -1,1 +1,16 @@
-Testing
+{
+"version":3,
+"file":"module_one.js",
+"lineCount":1,
+"mappings":"",
+"sources":[""],
+"names":[""]
+}
+{
+"version":3,
+"file":"module_two.js",
+"lineCount":1,
+"mappings":"",
+"sources":[""],
+"names":[""]
+}
