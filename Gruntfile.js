@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        '<%= nodeunit.tests %>',
+        '<%= nodeunit.tests %>'
       ],
       options: {
         jshintrc: '.jshintrc'
@@ -31,10 +31,11 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     mapsplit: {
       custom_options: {
-        options: {
-          outputPath: './tmp/'
-        },
-        files: ['test/fixtures/testing']
+//        options: {
+//        },
+        files: {
+          'test/fixtures/testing': './tmp/'
+        }
       }
     },
 
