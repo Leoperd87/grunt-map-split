@@ -36,17 +36,12 @@ exports['map-split'] = {
 //
 //    test.done();
 //  },
-  first_map: function(test) {
+  default_options: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/module_one.js.map');
     var expected = grunt.file.read('test/expected/module_one.js.map');
     test.equal(actual, expected, 'module_map.js.map should be same');
-
-    test.done();
-  },
-  second_map: function(test) {
-    test.expect(1);
 
     var actual = grunt.file.read('tmp/module_two.js.map');
     var expected = grunt.file.read('test/expected/module_two.js.map');
