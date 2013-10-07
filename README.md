@@ -69,6 +69,20 @@ grunt.initConfig({
 }
 ```
 
+Should create two files:
+
+`module_one.js`:
+
+```json
+{"version":3,"file":"module_one.js","lineCount":1,"mappings":"","sources":[""],"names":[""]}
+```
+
+`module_two.js`:
+
+```json
+{"version":3,"file":"module_two.js","lineCount":1,"mappings":"","sources":[""],"names":[""]}
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
