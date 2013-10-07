@@ -20,29 +20,29 @@ module.exports = function (grunt) {
 //      separator: ', '
 //    });
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function (f) {
-      var filepath = f.dest;
+    var data = this.data.files;
+
+    for (var key in data) {
+      var filepath = key;
+
       if (!grunt.file.exists(filepath)) {
         grunt.log.warn('Source file "' + filepath + '" not found.');
         return false;
-      } else {
-        return true;
       }
       var structure = JSON.parse('[' + (grunt.file.read(filepath)).replace(/}/g, '},') + '{}]');
 
-      // Concat specified files.
       structure.filter(function (record) {
         return record.file;
       }).map(function (record) {
 
           // Print a success message.
-          grunt.log.writeln('File "' + f.dest + '" created.');
+          grunt.log.writeln('File "' + data[key] + record.file + '" created.');
 
-          grunt.file.write(f.src + record.file + '.map', JSON.stringify(record));
+          grunt.file.write(data[key] + record.file + '.map', JSON.stringify(record));
           return true;
         });
-    });
+    }
+
   });
 
 };
