@@ -1,12 +1,12 @@
 {
   "name": "grunt-map-split",
   "description": "javascript source map file split",
-  "version": "0.0.2",
-  "homepage": "",
+  "version": "0.0.3",
+  "homepage": "http://dej.in.ua/grunt-map-split/",
   "author": {
     "name": "Efim Vl. Dejin",
     "email": "efim@dejin.pp.ua",
-    "url": "http://dj7.dyndns.org"
+    "url": "http://dej.in.ua/"
   },
   "repository": {
     "type": "git",
